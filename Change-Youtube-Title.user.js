@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Change YouTube Title!
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  What is Title?!
 // @author       noverio
 // @match        https://www.youtube.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
+// @updateURL    https://github.com/r0senove/ChangeYoutubeTitle/raw/main/Change-Youtube-Title.user.js
+// @downloadURL  https://github.com/r0senove/ChangeYoutubeTitle/raw/main/Change-Youtube-Title.user.js
 // @grant        none
 // ==/UserScript==
 
