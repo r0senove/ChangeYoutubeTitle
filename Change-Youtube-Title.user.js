@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Change YouTube Title!
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  What is Title?!
 // @author       noverio
 // @match        https://www.youtube.com/*
