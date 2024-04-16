@@ -18,11 +18,15 @@
     function modifyVideoTitleOnce() {
         // Check for the video title element
         const videoTitleElement = document.querySelector("#title > h1 > yt-formatted-string");
+        const videoTitleElement2 = document.querySelector("#title > h1 > yt-formatted-string > span");
+        const videoTitleElementTag = document.querySelector("#title > h1 > yt-formatted-string > a");
         const webpageTitleElement = document.querySelector("head > title");
 
         if (videoTitleElement && webpageTitleElement) {
             // Replace the text content of the video title
             videoTitleElement.textContent = 'WHAT!?';
+            videoTitleElement2.textContent = '';
+            videoTitleElementTag.textContent = '';
             webpageTitleElement.textContent = 'WHAT!? - YouTube';
 
             // Remove the mutation observer after modification
