@@ -1,9 +1,7 @@
-# ChangeYoutubeTitle
-Your watched YouTube video title changed to WHAT!?
-
+# Change Youtube Title to WHAT!?
 ## Introduction
 
-This repository contains a userscript designed to remove the annoying "Ad blocker is not allowed on Youtube" popup. Follow the instructions below to get started. We also have an undetected way of skipping ads if you get blocked from the video player.
+This repository contains a userscript designed to change title youtube whenever you watching any video.
 
 ## Table of Contents:
 
