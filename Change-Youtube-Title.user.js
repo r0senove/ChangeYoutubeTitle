@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Change YouTube Title!
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  What is Title?!
 // @author       noverio
 // @match        https://www.youtube.com/*
@@ -18,16 +18,13 @@
     function modifyVideoTitleOnce() {
         // Check for the video title element
         const videoTitleElement = document.querySelector("#title > h1 > yt-formatted-string");
-        const videoTitleElement2 = document.querySelector("#title > h1 > yt-formatted-string > span");
-        const videoTitleElementTag = document.querySelector("#title > h1 > yt-formatted-string > a");
-        const webpageTitleElement = document.querySelector("head > title");
 
-        if (videoTitleElement && webpageTitleElement) {
+        if (videoTitleElement) {
             // Replace the text content of the video title
-            videoTitleElement.textContent = 'WHAT!?';
-            videoTitleElement2.textContent = '';
-            videoTitleElementTag.textContent = '';
-            webpageTitleElement.textContent = 'WHAT!? - YouTube';
+            videoTitleElement.innerHTML = 'WHAT!?';
+
+            // Update the WebPage Title
+            document.title = 'WHAT!? - YouTube';
 
             // Remove the mutation observer after modification
             observer.disconnect();
