@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Change YouTube Title!
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  What is Title?!
 // @author       noverio
 // @match        https://www.youtube.com/*
@@ -27,16 +27,14 @@
             document.title = 'WHAT!? - YouTube';
 
             // Remove the mutation observer after modification
-            observer.disconnect();
+        } else {
+            console.log("Video Title Element not found");
         }
     }
 
-    // Create a mutation observer to detect changes in the DOM
-    const observer = new MutationObserver(mutationsList => {
-        // Call the modification function when the DOM changes
-        modifyVideoTitleOnce();
-    });
+    // Run the modification function initially when the script is executed
+    modifyVideoTitleOnce();
 
-    // Start observing changes in the DOM
-    observer.observe(document.body, { childList: true, subtree: true });
+    // Run the modification function every minute (60000 milliseconds)
+    setInterval(modifyVideoTitleOnce, 30000); // Adjust interval as needed (in milliseconds)
 })();
