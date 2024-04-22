@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Change YouTube Title!
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @description  What is Title?!
 // @author       noverio
 // @match        https://www.youtube.com/*
@@ -35,6 +35,6 @@
     // Run the modification function initially when the script is executed
     modifyVideoTitleOnce();
 
-    // Run the modification function every minute (60000 milliseconds)
-    setInterval(modifyVideoTitleOnce, 30000); // Adjust interval as needed (in milliseconds)
+    // Run the modification function every 15s (15000 milliseconds)
+    setInterval(modifyVideoTitleOnce, 15000); // Adjust interval as needed (in milliseconds)
 })();
