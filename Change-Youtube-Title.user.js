@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Change YouTube Title!
 // @namespace    http://tampermonkey.net/
-// @version      1.5
+// @version      1.6
 // @description  What is Title?!
 // @author       noverio
 // @match        https://www.youtube.com/*
@@ -21,7 +21,7 @@
 
         if (videoTitleElement) {
             // Replace the text content of the video title
-            videoTitleElement.innerHTML = 'WHAT!?';
+            videoTitleElement.innerText = 'WHAT!?';
 
             // Update the WebPage Title
             document.title = 'WHAT!? - YouTube';
